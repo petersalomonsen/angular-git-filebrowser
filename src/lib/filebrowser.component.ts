@@ -220,7 +220,7 @@ export class FileBrowserComponent implements OnInit, AfterViewInit, OnDestroy {
             .pipe(
                 mergeMap((contents) =>
                     this.dialog.open(SimpleTextEditorDialogComponent,
-                        {data: {contents: contents}})
+                        {data: {contents: contents, filename: file.name}})
                         .afterClosed()
                 ),
                 filter(res => res ? true : false),

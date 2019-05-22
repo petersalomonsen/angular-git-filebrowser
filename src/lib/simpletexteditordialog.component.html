@@ -1,4 +1,9 @@
+<h4 mat-dialog-title>{{filename}}</h4>
 <mat-dialog-content>
+    <button mat-button (click)="useStackEdit()" style="color: blue">
+        <img src="https://benweet.github.io/stackedit.js/icon.svg" style="height: 24px;">
+        Edit with StackEdit
+    </button>
     <mat-form-field style="width: 100%">
         <textarea matInput [(ngModel)]="content" matTextareaAutosize></textarea>
     </mat-form-field>
